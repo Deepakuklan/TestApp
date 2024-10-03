@@ -1,7 +1,7 @@
+import 'package:fileflow/common/model/session_status.dart';
+import 'package:fileflow/util/native/macos_channel.dart';
+import 'package:fileflow/util/native/platform_check.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/session_status.dart';
-import 'package:localsend_app/util/native/macos_channel.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
 import 'package:windows_taskbar/windows_taskbar.dart';
 
 enum TaskbarIcon { regular, error, success }

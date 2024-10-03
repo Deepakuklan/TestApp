@@ -4,22 +4,22 @@ import 'dart:io';
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/constants.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/model/stored_security_context.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/model/persistence/color_mode.dart';
-import 'package:localsend_app/model/persistence/favorite_device.dart';
-import 'package:localsend_app/model/persistence/receive_history_entry.dart';
-import 'package:localsend_app/model/send_mode.dart';
-import 'package:localsend_app/provider/window_dimensions_provider.dart';
-import 'package:localsend_app/util/alias_generator.dart';
-import 'package:localsend_app/util/native/autostart_helper.dart';
-import 'package:localsend_app/util/native/context_menu_helper.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
-import 'package:localsend_app/util/security_helper.dart';
-import 'package:localsend_app/util/shared_preferences/shared_preferences_file.dart';
-import 'package:localsend_app/util/shared_preferences/shared_preferences_portable.dart';
+import 'package:fileflow/common/constants.dart';
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/model/stored_security_context.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/model/persistence/color_mode.dart';
+import 'package:fileflow/model/persistence/favorite_device.dart';
+import 'package:fileflow/model/persistence/receive_history_entry.dart';
+import 'package:fileflow/model/send_mode.dart';
+import 'package:fileflow/provider/window_dimensions_provider.dart';
+import 'package:fileflow/util/alias_generator.dart';
+import 'package:fileflow/util/native/autostart_helper.dart';
+import 'package:fileflow/util/native/context_menu_helper.dart';
+import 'package:fileflow/util/native/platform_check.dart';
+import 'package:fileflow/util/security_helper.dart';
+import 'package:fileflow/util/shared_preferences/shared_preferences_file.dart';
+import 'package:fileflow/util/shared_preferences/shared_preferences_portable.dart';
 import 'package:logging/logging.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -37,7 +37,7 @@ String get _windowsFile {
 
 String get _windowsLegacyFile {
   final appData = Platform.environment['APPDATA'];
-  return '$appData\\org.localsend\\localsend_app\\shared_preferences.json';
+  return '$appData\\org.localsend\\fileflow\\shared_preferences.json';
 }
 
 // Version of the storage

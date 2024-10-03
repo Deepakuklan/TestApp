@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/src/isolate/parent/actions_sync.dart';
-import 'package:localsend_app/common/src/isolate/parent/parent_isolate_provider.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/model/persistence/color_mode.dart';
-import 'package:localsend_app/model/send_mode.dart';
-import 'package:localsend_app/model/state/settings_state.dart';
-import 'package:localsend_app/provider/persistence_provider.dart';
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/src/isolate/parent/actions_sync.dart';
+import 'package:fileflow/common/src/isolate/parent/parent_isolate_provider.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/model/persistence/color_mode.dart';
+import 'package:fileflow/model/send_mode.dart';
+import 'package:fileflow/model/state/settings_state.dart';
+import 'package:fileflow/provider/persistence_provider.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 
 final settingsProvider =

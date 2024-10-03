@@ -1,8 +1,8 @@
+import 'package:fileflow/gen/assets.gen.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/provider/animation_provider.dart';
+import 'package:fileflow/util/native/platform_check.dart';
 import 'package:flutter/foundation.dart';
-import 'package:localsend_app/gen/assets.gen.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/provider/animation_provider.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
 import 'package:logging/logging.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:tray_manager/tray_manager.dart' as tm;
@@ -38,7 +38,9 @@ Future<void> initTray() async {
       ),
       tm.MenuItem(
         key: TrayEntry.close.name,
-        label: defaultTargetPlatform == TargetPlatform.windows ? t.tray.closeWindows : t.tray.close,
+        label: defaultTargetPlatform == TargetPlatform.windows
+            ? t.tray.closeWindows
+            : t.tray.close,
       ),
     ];
     await tm.trayManager.setContextMenu(tm.Menu(items: items));

@@ -1,15 +1,15 @@
 import 'package:collection/collection.dart';
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/src/isolate/parent/actions.dart';
+import 'package:fileflow/common/src/isolate/parent/parent_isolate_provider.dart';
+import 'package:fileflow/common/util/task_runner.dart';
+import 'package:fileflow/config/theme.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/provider/last_devices.provider.dart';
+import 'package:fileflow/provider/local_ip_provider.dart';
+import 'package:fileflow/provider/settings_provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/src/isolate/parent/actions.dart';
-import 'package:localsend_app/common/src/isolate/parent/parent_isolate_provider.dart';
-import 'package:localsend_app/common/util/task_runner.dart';
-import 'package:localsend_app/config/theme.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/provider/last_devices.provider.dart';
-import 'package:localsend_app/provider/local_ip_provider.dart';
-import 'package:localsend_app/provider/settings_provider.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 

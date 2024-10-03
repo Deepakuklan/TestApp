@@ -1,16 +1,17 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:file_selector/file_selector.dart' as file_selector;
+import 'package:fileflow/provider/device_info_provider.dart';
+import 'package:fileflow/util/native/android_saf.dart';
+import 'package:fileflow/util/native/platform_check.dart';
 import 'package:flutter/foundation.dart';
-import 'package:localsend_app/provider/device_info_provider.dart';
-import 'package:localsend_app/util/native/android_saf.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 
 /// Opens a file picker to select a directory.
 /// Returns null if the user cancels the selection.
 Future<String?> pickDirectoryPath() async {
   if (defaultTargetPlatform == TargetPlatform.android &&
-      (RefenaScope.defaultRef.read(deviceRawInfoProvider).androidSdkInt ?? 0) >= contentUriMinSdk) {
+      (RefenaScope.defaultRef.read(deviceRawInfoProvider).androidSdkInt ?? 0) >=
+          contentUriMinSdk) {
     return await pickDirectoryPathAndroid();
   }
 

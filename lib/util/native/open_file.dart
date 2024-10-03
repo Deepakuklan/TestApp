@@ -1,8 +1,8 @@
+import 'package:fileflow/common/model/file_type.dart';
+import 'package:fileflow/util/native/android_saf.dart';
+import 'package:fileflow/util/native/platform_check.dart';
+import 'package:fileflow/widget/dialogs/cannot_open_file_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/file_type.dart';
-import 'package:localsend_app/util/native/android_saf.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
-import 'package:localsend_app/widget/dialogs/cannot_open_file_dialog.dart';
 import 'package:open_filex/open_filex.dart';
 import 'package:permission_handler/permission_handler.dart';
 

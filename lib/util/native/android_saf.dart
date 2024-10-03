@@ -1,11 +1,11 @@
 import 'package:dart_mappable/dart_mappable.dart';
+import 'package:fileflow/util/native/content_uri_helper.dart';
 import 'package:flutter/services.dart';
-import 'package:localsend_app/util/native/content_uri_helper.dart';
 import 'package:logging/logging.dart';
 
 part 'android_saf.mapper.dart';
 
-const _methodChannel = MethodChannel('org.localsend.localsend_app/localsend');
+const _methodChannel = MethodChannel('org.localsend.fileflow/localsend');
 final _logger = Logger('AndroidSaf');
 
 /// From Android 10 and above, we need to use the Storage Access Framework (SAF) to access files due to the scoped storage.
@@ -22,7 +22,9 @@ Future<PickDirectoryResult?> pickDirectoryAndroid() async {
 
   return PickDirectoryResultMapper.fromJson({
     'directoryUri': result['directoryUri'],
-    'files': (result['files'] as List).map((e) => FileInfoMapper.fromJson((e as Map).cast<String, dynamic>())).toList(),
+    'files': (result['files'] as List)
+        .map((e) => FileInfoMapper.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
   });
 }
 
@@ -37,7 +39,9 @@ Future<List<FileInfo>?> pickFilesAndroid() async {
     return null;
   }
 
-  return result.map((e) => FileInfoMapper.fromJson((e as Map).cast<String, dynamic>())).toList();
+  return result
+      .map((e) => FileInfoMapper.fromJson((e as Map).cast<String, dynamic>()))
+      .toList();
 }
 
 Future<void> createDirectory({

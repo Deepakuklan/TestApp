@@ -1,9 +1,9 @@
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/util/native/file_picker.dart';
+import 'package:fileflow/util/native/platform_check.dart';
+import 'package:fileflow/widget/big_button.dart';
+import 'package:fileflow/widget/dialogs/custom_bottom_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/util/native/file_picker.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
-import 'package:localsend_app/widget/big_button.dart';
-import 'package:localsend_app/widget/dialogs/custom_bottom_sheet.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 
@@ -12,7 +12,9 @@ class AddFileDialog extends StatelessWidget {
 
   const AddFileDialog({required this.options});
 
-  static Future<void> open({required BuildContext context, required List<FilePickerOption> options}) async {
+  static Future<void> open(
+      {required BuildContext context,
+      required List<FilePickerOption> options}) async {
     if (checkPlatformIsDesktop()) {
       await showDialog(
         context: context,
@@ -62,7 +64,8 @@ class AddFileDialog extends StatelessWidget {
             filled: true,
             onTap: () async {
               context.popUntilRoot();
-              await context.global.dispatchAsync(PickFileAction(option: option, context: context));
+              await context.global.dispatchAsync(
+                  PickFileAction(option: option, context: context));
             },
           );
         }),

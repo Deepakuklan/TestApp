@@ -1,11 +1,12 @@
 import 'dart:async';
 import 'dart:io';
+
+import 'package:fileflow/provider/animation_provider.dart';
+import 'package:fileflow/provider/settings_provider.dart';
+import 'package:fileflow/provider/window_dimensions_provider.dart';
+import 'package:fileflow/util/native/platform_check.dart';
+import 'package:fileflow/util/native/tray_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/provider/animation_provider.dart';
-import 'package:localsend_app/provider/settings_provider.dart';
-import 'package:localsend_app/provider/window_dimensions_provider.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
-import 'package:localsend_app/util/native/tray_helper.dart';
 import 'package:logging/logging.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:window_manager/window_manager.dart';
@@ -29,11 +30,13 @@ class WindowWatcher extends StatefulWidget {
   }
 }
 
-class _WindowWatcherState extends State<WindowWatcher> with WindowListener, Refena {
+class _WindowWatcherState extends State<WindowWatcher>
+    with WindowListener, Refena {
   static WindowDimensionsController? _dimensionsController;
   static Stopwatch s = Stopwatch();
 
-  WindowDimensionsController _ensureDimensionsProvider() => ref.watch(windowDimensionProvider);
+  WindowDimensionsController _ensureDimensionsProvider() =>
+      ref.watch(windowDimensionProvider);
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +74,8 @@ class _WindowWatcherState extends State<WindowWatcher> with WindowListener, Refe
       s.reset();
       final windowOffset = await windowManager.getPosition();
       final windowSize = await windowManager.getSize();
-      await _dimensionsController?.storeDimensions(windowOffset: windowOffset, windowSize: windowSize);
+      await _dimensionsController?.storeDimensions(
+          windowOffset: windowOffset, windowSize: windowSize);
     }
   }
 
@@ -91,7 +95,8 @@ class _WindowWatcherState extends State<WindowWatcher> with WindowListener, Refe
   Future<void> onWindowClose() async {
     final windowOffset = await windowManager.getPosition();
     final windowSize = await windowManager.getSize();
-    await _dimensionsController?.storeDimensions(windowOffset: windowOffset, windowSize: windowSize);
+    await _dimensionsController?.storeDimensions(
+        windowOffset: windowOffset, windowSize: windowSize);
 
     if (!checkPlatformIsDesktop()) {
       return;

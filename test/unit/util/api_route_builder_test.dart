@@ -1,5 +1,5 @@
-import 'package:localsend_app/common/api_route_builder.dart';
-import 'package:localsend_app/common/model/device.dart';
+import 'package:fileflow/common/api_route_builder.dart';
+import 'package:fileflow/common/model/device.dart';
 import 'package:test/test.dart';
 
 void main() {

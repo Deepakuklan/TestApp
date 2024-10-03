@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:collection/collection.dart';
+import 'package:fileflow/util/native/platform_check.dart';
+import 'package:fileflow/util/native/tray_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
-import 'package:localsend_app/util/native/tray_helper.dart';
 import 'package:tray_manager/tray_manager.dart';
 
 class TrayWatcher extends StatefulWidget {
@@ -49,7 +49,8 @@ class _TrayWatcherState extends State<TrayWatcher> with TrayListener {
 
   @override
   void onTrayMenuItemClick(MenuItem menuItem) async {
-    final entry = TrayEntry.values.firstWhereOrNull((e) => e.name == menuItem.key);
+    final entry =
+        TrayEntry.values.firstWhereOrNull((e) => e.name == menuItem.key);
     switch (entry) {
       case TrayEntry.open:
         await showFromTray();

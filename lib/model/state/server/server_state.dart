@@ -1,7 +1,7 @@
 import 'package:dart_mappable/dart_mappable.dart';
-import 'package:localsend_app/model/state/send/web/web_send_state.dart';
-import 'package:localsend_app/model/state/server/receive_session_state.dart';
-import 'package:localsend_app/util/simple_server.dart';
+import 'package:fileflow/model/state/send/web/web_send_state.dart';
+import 'package:fileflow/model/state/server/receive_session_state.dart';
+import 'package:fileflow/util/simple_server.dart';
 
 part 'server_state.mapper.dart';
 
@@ -13,7 +13,8 @@ class ServerState with ServerStateMappable {
   final bool https;
   final ReceiveSessionState? session;
   final WebSendState? webSendState;
-  final Map<String, int> pinAttempts; // IP address -> attempts (won't be reset on session end)
+  final Map<String, int>
+      pinAttempts; // IP address -> attempts (won't be reset on session end)
 
   const ServerState({
     required this.httpServer,

@@ -1,4 +1,4 @@
-import 'package:localsend_app/gen/strings.g.dart';
+import 'package:fileflow/gen/strings.g.dart';
 
 void initI18n() {
   // Register default plural resolver

@@ -1,8 +1,8 @@
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:dio/dio.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/model/session_status.dart';
-import 'package:localsend_app/model/state/send/sending_file.dart';
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/model/session_status.dart';
+import 'package:fileflow/model/state/send/sending_file.dart';
 
 part 'send_session_state.mapper.dart';
 

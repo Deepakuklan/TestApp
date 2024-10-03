@@ -1,11 +1,12 @@
-import 'package:localsend_app/model/log_entry.dart';
+import 'package:fileflow/model/log_entry.dart';
 import 'package:logging/logging.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 
 final _logger = Logger('HTTP');
 
 /// Contains the discovery logs for debugging purposes.
-final httpLogsProvider = NotifierProvider<HttpLogsService, List<LogEntry>>((ref) {
+final httpLogsProvider =
+    NotifierProvider<HttpLogsService, List<LogEntry>>((ref) {
   return HttpLogsService();
 });
 

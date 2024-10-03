@@ -1,11 +1,11 @@
 import 'package:dart_mappable/dart_mappable.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/model/session_status.dart';
-import 'package:localsend_app/model/persistence/receive_history_entry.dart';
-import 'package:localsend_app/pages/progress_page.dart';
-import 'package:localsend_app/pages/receive_page.dart';
-import 'package:localsend_app/provider/network/server/server_provider.dart';
-import 'package:localsend_app/provider/selection/selected_receiving_files_provider.dart';
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/model/session_status.dart';
+import 'package:fileflow/model/persistence/receive_history_entry.dart';
+import 'package:fileflow/pages/progress_page.dart';
+import 'package:fileflow/pages/receive_page.dart';
+import 'package:fileflow/provider/network/server/server_provider.dart';
+import 'package:fileflow/provider/selection/selected_receiving_files_provider.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 

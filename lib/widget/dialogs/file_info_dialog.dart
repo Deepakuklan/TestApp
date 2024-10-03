@@ -1,7 +1,7 @@
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/model/persistence/receive_history_entry.dart';
+import 'package:fileflow/util/file_size_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/model/persistence/receive_history_entry.dart';
-import 'package:localsend_app/util/file_size_helper.dart';
 import 'package:routerino/routerino.dart';
 
 class FileInfoDialog extends StatelessWidget {
@@ -40,7 +40,9 @@ class FileInfoDialog extends StatelessWidget {
                       children: [
                         Text(t.dialogs.fileInfo.path),
                         const SizedBox(width: 10),
-                        SelectableText(entry.savedToGallery ? t.progressPage.savedToGallery : (entry.path ?? '')),
+                        SelectableText(entry.savedToGallery
+                            ? t.progressPage.savedToGallery
+                            : (entry.path ?? '')),
                       ],
                     ),
                   ],
@@ -70,7 +72,8 @@ class FileInfoDialog extends StatelessWidget {
               if (entry.isMessage)
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
-                  child: SelectableText(entry.fileName + entry.fileName + entry.fileName),
+                  child: SelectableText(
+                      entry.fileName + entry.fileName + entry.fileName),
                 ),
             ],
           ),

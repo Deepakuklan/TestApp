@@ -1,7 +1,7 @@
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/provider/settings_provider.dart';
+import 'package:fileflow/widget/responsive_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/provider/settings_provider.dart';
-import 'package:localsend_app/widget/responsive_list_view.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 
 class LanguagePage extends StatelessWidget {
@@ -10,7 +10,8 @@ class LanguagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Translations.of(context);
-    final activeLocale = context.ref.watch(settingsProvider.select((s) => s.locale));
+    final activeLocale =
+        context.ref.watch(settingsProvider.select((s) => s.locale));
     return Scaffold(
       appBar: AppBar(
         title: Text(t.settingsTab.general.language),
@@ -34,7 +35,8 @@ class LanguagePage extends StatelessWidget {
               title: Row(
                 children: [
                   Flexible(
-                    child: Text(locale?.humanName ?? t.settingsTab.general.languageOptions.system),
+                    child: Text(locale?.humanName ??
+                        t.settingsTab.general.languageOptions.system),
                   ),
                   if (locale == activeLocale) ...[
                     const SizedBox(width: 10),

@@ -1,9 +1,9 @@
 import 'package:dart_mappable/dart_mappable.dart';
+import 'package:fileflow/common/model/device_info_result.dart';
+import 'package:fileflow/model/persistence/color_mode.dart';
+import 'package:fileflow/model/state/server/server_state.dart';
+import 'package:fileflow/model/state/settings_state.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/device_info_result.dart';
-import 'package:localsend_app/model/persistence/color_mode.dart';
-import 'package:localsend_app/model/state/server/server_state.dart';
-import 'package:localsend_app/model/state/settings_state.dart';
 
 part 'settings_tab_vm.mapper.dart';
 

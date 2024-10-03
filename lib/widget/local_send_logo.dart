@@ -1,5 +1,5 @@
+import 'package:fileflow/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/gen/assets.gen.dart';
 
 class LocalSendLogo extends StatelessWidget {
   final bool withText;

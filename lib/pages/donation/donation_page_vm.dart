@@ -1,8 +1,8 @@
-import 'package:localsend_app/model/state/purchase_state.dart';
+import 'package:fileflow/model/state/purchase_state.dart';
 // [FOSS_REMOVE_START]
-import 'package:localsend_app/provider/purchase_provider.dart';
+import 'package:fileflow/provider/purchase_provider.dart';
 // [FOSS_REMOVE_END]
-import 'package:localsend_app/util/native/platform_check.dart';
+import 'package:fileflow/util/native/platform_check.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 
 class DonationPageVm {
@@ -31,8 +31,10 @@ final donationPageVmProvider = ViewProvider<DonationPageVm>((ref) {
     prices: state.prices,
     purchased: state.purchases,
     pending: state.pending,
-    purchase: (item) => ref.redux(purchaseProvider).dispatchAsync(PurchaseAction(item)),
-    restore: () => ref.redux(purchaseProvider).dispatchAsync(PurchaseRestoreAction()),
+    purchase: (item) =>
+        ref.redux(purchaseProvider).dispatchAsync(PurchaseAction(item)),
+    restore: () =>
+        ref.redux(purchaseProvider).dispatchAsync(PurchaseRestoreAction()),
   );
 });
 // [FOSS_REMOVE_END]

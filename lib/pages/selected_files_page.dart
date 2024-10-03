@@ -1,15 +1,15 @@
 import 'dart:convert';
 
+import 'package:fileflow/common/model/file_type.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/provider/selection/selected_sending_files_provider.dart';
+import 'package:fileflow/util/file_size_helper.dart';
+import 'package:fileflow/util/native/open_file.dart';
+import 'package:fileflow/util/ui/nav_bar_padding.dart';
+import 'package:fileflow/widget/dialogs/message_input_dialog.dart';
+import 'package:fileflow/widget/file_thumbnail.dart';
+import 'package:fileflow/widget/responsive_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/file_type.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/provider/selection/selected_sending_files_provider.dart';
-import 'package:localsend_app/util/file_size_helper.dart';
-import 'package:localsend_app/util/native/open_file.dart';
-import 'package:localsend_app/util/ui/nav_bar_padding.dart';
-import 'package:localsend_app/widget/dialogs/message_input_dialog.dart';
-import 'package:localsend_app/widget/file_thumbnail.dart';
-import 'package:localsend_app/widget/responsive_list_view.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 

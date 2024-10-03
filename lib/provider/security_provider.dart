@@ -1,8 +1,8 @@
-import 'package:localsend_app/common/model/stored_security_context.dart';
-import 'package:localsend_app/common/src/isolate/parent/actions_sync.dart';
-import 'package:localsend_app/common/src/isolate/parent/parent_isolate_provider.dart';
-import 'package:localsend_app/provider/persistence_provider.dart';
-import 'package:localsend_app/util/security_helper.dart';
+import 'package:fileflow/common/model/stored_security_context.dart';
+import 'package:fileflow/common/src/isolate/parent/actions_sync.dart';
+import 'package:fileflow/common/src/isolate/parent/parent_isolate_provider.dart';
+import 'package:fileflow/provider/persistence_provider.dart';
+import 'package:fileflow/util/security_helper.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 
 /// This provider manages the [StoredSecurityContext].

@@ -1,6 +1,6 @@
+import 'package:fileflow/config/theme.dart';
+import 'package:fileflow/gen/strings.g.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/config/theme.dart';
-import 'package:localsend_app/gen/strings.g.dart';
 import 'package:routerino/routerino.dart';
 
 /// A [AlertDialog] on all devices.
@@ -28,7 +28,8 @@ class _TextFieldWithActionsState extends State<TextFieldWithActions> {
     return TextButton(
       style: TextButton.styleFrom(
         backgroundColor: Theme.of(context).inputDecorationTheme.fillColor,
-        shape: RoundedRectangleBorder(borderRadius: Theme.of(context).inputDecorationTheme.borderRadius),
+        shape: RoundedRectangleBorder(
+            borderRadius: Theme.of(context).inputDecorationTheme.borderRadius),
         foregroundColor: Theme.of(context).colorScheme.onSurface,
       ),
       onPressed: () async {

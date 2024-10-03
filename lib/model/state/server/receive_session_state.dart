@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:dart_mappable/dart_mappable.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/model/file_type.dart';
-import 'package:localsend_app/common/model/session_status.dart';
-import 'package:localsend_app/model/state/server/receiving_file.dart';
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/model/file_type.dart';
+import 'package:fileflow/common/model/session_status.dart';
+import 'package:fileflow/model/state/server/receiving_file.dart';
 
 part 'receive_session_state.mapper.dart';
 

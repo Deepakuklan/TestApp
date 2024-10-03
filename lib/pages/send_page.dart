@@ -1,20 +1,20 @@
 import 'dart:async';
 
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/model/session_status.dart';
+import 'package:fileflow/config/theme.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/provider/device_info_provider.dart';
+import 'package:fileflow/provider/favorites_provider.dart';
+import 'package:fileflow/provider/network/send_provider.dart';
+import 'package:fileflow/util/favorites.dart';
+import 'package:fileflow/util/native/taskbar_helper.dart';
+import 'package:fileflow/widget/animations/initial_fade_transition.dart';
+import 'package:fileflow/widget/animations/initial_slide_transition.dart';
+import 'package:fileflow/widget/dialogs/error_dialog.dart';
+import 'package:fileflow/widget/list_tile/device_list_tile.dart';
+import 'package:fileflow/widget/responsive_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/model/session_status.dart';
-import 'package:localsend_app/config/theme.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/provider/device_info_provider.dart';
-import 'package:localsend_app/provider/favorites_provider.dart';
-import 'package:localsend_app/provider/network/send_provider.dart';
-import 'package:localsend_app/util/favorites.dart';
-import 'package:localsend_app/util/native/taskbar_helper.dart';
-import 'package:localsend_app/widget/animations/initial_fade_transition.dart';
-import 'package:localsend_app/widget/animations/initial_slide_transition.dart';
-import 'package:localsend_app/widget/dialogs/error_dialog.dart';
-import 'package:localsend_app/widget/list_tile/device_list_tile.dart';
-import 'package:localsend_app/widget/responsive_list_view.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 

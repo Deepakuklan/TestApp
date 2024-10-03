@@ -1,9 +1,9 @@
 import 'package:dart_mappable/dart_mappable.dart';
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/model/persistence/color_mode.dart';
+import 'package:fileflow/model/send_mode.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/model/persistence/color_mode.dart';
-import 'package:localsend_app/model/send_mode.dart';
 
 part 'settings_state.mapper.dart';
 

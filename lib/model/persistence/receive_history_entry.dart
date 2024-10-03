@@ -1,7 +1,7 @@
 import 'package:dart_mappable/dart_mappable.dart';
+import 'package:fileflow/common/model/file_type.dart';
+import 'package:fileflow/gen/strings.g.dart';
 import 'package:intl/intl.dart';
-import 'package:localsend_app/common/model/file_type.dart';
-import 'package:localsend_app/gen/strings.g.dart';
 
 part 'receive_history_entry.mapper.dart';
 

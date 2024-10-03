@@ -1,12 +1,12 @@
 import 'dart:io';
 
+import 'package:fileflow/pages/home_page.dart';
+import 'package:fileflow/pages/home_page_controller.dart';
+import 'package:fileflow/util/native/file_picker.dart';
+import 'package:fileflow/util/native/platform_check.dart';
+import 'package:fileflow/widget/watcher/window_watcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:localsend_app/pages/home_page.dart';
-import 'package:localsend_app/pages/home_page_controller.dart';
-import 'package:localsend_app/util/native/file_picker.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
-import 'package:localsend_app/widget/watcher/window_watcher.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 
@@ -24,24 +24,35 @@ class ShortcutWatcher extends StatelessWidget {
 
         // Add Control+Q binding for Linux
         // https://github.com/localsend/localsend/issues/194
-        if (checkPlatform([TargetPlatform.linux])) LogicalKeySet(LogicalKeyboardKey.control, LogicalKeyboardKey.keyQ): _ExitAppIntent(),
+        if (checkPlatform([TargetPlatform.linux]))
+          LogicalKeySet(LogicalKeyboardKey.control, LogicalKeyboardKey.keyQ):
+              _ExitAppIntent(),
         // Add Command+W to close the window for macOS
-        if (checkPlatform([TargetPlatform.macOS])) LogicalKeySet(LogicalKeyboardKey.meta, LogicalKeyboardKey.keyW): _CloseWindowIntent(),
+        if (checkPlatform([TargetPlatform.macOS]))
+          LogicalKeySet(LogicalKeyboardKey.meta, LogicalKeyboardKey.keyW):
+              _CloseWindowIntent(),
 
         LogicalKeySet(LogicalKeyboardKey.escape): _PopPageIntent(),
 
         // Control+V and Command+V
-        LogicalKeySet(LogicalKeyboardKey.control, LogicalKeyboardKey.keyV): _PasteIntent(),
-        LogicalKeySet(LogicalKeyboardKey.meta, LogicalKeyboardKey.keyV): _PasteIntent(),
+        LogicalKeySet(LogicalKeyboardKey.control, LogicalKeyboardKey.keyV):
+            _PasteIntent(),
+        LogicalKeySet(LogicalKeyboardKey.meta, LogicalKeyboardKey.keyV):
+            _PasteIntent(),
       },
       child: Actions(
         actions: {
           _ExitAppIntent: CallbackAction(onInvoke: (_) => exit(0)),
-          _PopPageIntent: CallbackAction(onInvoke: (_) async => Navigator.of(Routerino.context).maybePop()),
+          _PopPageIntent: CallbackAction(
+              onInvoke: (_) async =>
+                  Navigator.of(Routerino.context).maybePop()),
           _PasteIntent: CallbackAction(onInvoke: (_) async {
-            await context.global.dispatchAsync(PickFileAction(option: FilePickerOption.clipboard, context: context));
+            await context.global.dispatchAsync(PickFileAction(
+                option: FilePickerOption.clipboard, context: context));
             if (context.mounted) {
-              context.redux(homePageControllerProvider).dispatch(ChangeTabAction(HomeTab.send));
+              context
+                  .redux(homePageControllerProvider)
+                  .dispatch(ChangeTabAction(HomeTab.send));
             }
             return null;
           }),

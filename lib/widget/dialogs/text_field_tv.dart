@@ -1,7 +1,7 @@
+import 'package:fileflow/config/theme.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/provider/tv_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/config/theme.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/provider/tv_provider.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 
@@ -31,7 +31,9 @@ class _TextFieldTvState extends State<TextFieldTv> with Refena {
       return TextButton(
         style: TextButton.styleFrom(
           backgroundColor: Theme.of(context).inputDecorationTheme.fillColor,
-          shape: RoundedRectangleBorder(borderRadius: Theme.of(context).inputDecorationTheme.borderRadius),
+          shape: RoundedRectangleBorder(
+              borderRadius:
+                  Theme.of(context).inputDecorationTheme.borderRadius),
           foregroundColor: Theme.of(context).colorScheme.onSurface,
         ),
         onPressed: () async {
@@ -63,7 +65,8 @@ class _TextFieldTvState extends State<TextFieldTv> with Refena {
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 5),
-          child: Text(widget.controller.text, style: Theme.of(context).textTheme.titleMedium),
+          child: Text(widget.controller.text,
+              style: Theme.of(context).textTheme.titleMedium),
         ),
       );
     } else {

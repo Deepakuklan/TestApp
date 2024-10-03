@@ -1,6 +1,6 @@
+import 'package:fileflow/provider/settings_provider.dart';
+import 'package:fileflow/util/native/platform_check.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:localsend_app/provider/settings_provider.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 
@@ -13,7 +13,8 @@ final sleepProvider = StateProvider<bool>((ref) {
 /// If false, then animations are disabled.
 final animationProvider = ViewProvider<bool>((ref) {
   final sleeping = ref.watch(sleepProvider);
-  final enableAnimations = ref.watch(settingsProvider.select((s) => s.enableAnimations));
+  final enableAnimations =
+      ref.watch(settingsProvider.select((s) => s.enableAnimations));
   final animations = enableAnimations && !sleeping;
 
   timeDilation = animations ? 1.0 : 0.00001;

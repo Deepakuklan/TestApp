@@ -1,7 +1,7 @@
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/util/native/platform_check.dart';
+import 'package:fileflow/widget/dialogs/custom_bottom_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
-import 'package:localsend_app/widget/dialogs/custom_bottom_sheet.dart';
 import 'package:routerino/routerino.dart';
 
 class CannotOpenFileDialog extends StatelessWidget {
@@ -9,7 +9,8 @@ class CannotOpenFileDialog extends StatelessWidget {
 
   const CannotOpenFileDialog({required this.path, super.key});
 
-  static Future<void> open(BuildContext context, String path, void Function()? onDeleteTap) async {
+  static Future<void> open(
+      BuildContext context, String path, void Function()? onDeleteTap) async {
     if (checkPlatformIsDesktop()) {
       await showDialog(
         context: context,
@@ -23,7 +24,8 @@ class CannotOpenFileDialog extends StatelessWidget {
                   onDeleteTap();
                   context.pop();
                 },
-                child: Text(t.receiveHistoryPage.entryActions.deleteFromHistory),
+                child:
+                    Text(t.receiveHistoryPage.entryActions.deleteFromHistory),
               ),
             TextButton(
               onPressed: () => context.pop(),

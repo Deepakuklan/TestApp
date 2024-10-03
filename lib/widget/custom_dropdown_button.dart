@@ -1,5 +1,5 @@
+import 'package:fileflow/config/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/config/theme.dart';
 
 /// A [DropdownButton] with a custom theme.
 /// Currently, there is no easy way to apply color and border radius to all [DropdownButton].
@@ -20,7 +20,8 @@ class CustomDropdownButton<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Theme.of(context).inputDecorationTheme.fillColor,
-      shape: RoundedRectangleBorder(borderRadius: Theme.of(context).inputDecorationTheme.borderRadius),
+      shape: RoundedRectangleBorder(
+          borderRadius: Theme.of(context).inputDecorationTheme.borderRadius),
       child: DropdownButton<T>(
         value: value,
         isExpanded: expanded,

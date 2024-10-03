@@ -1,13 +1,13 @@
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/src/isolate/parent/actions.dart';
+import 'package:fileflow/common/src/isolate/parent/parent_isolate_provider.dart';
+import 'package:fileflow/config/theme.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/model/persistence/favorite_device.dart';
+import 'package:fileflow/provider/favorites_provider.dart';
+import 'package:fileflow/provider/settings_provider.dart';
+import 'package:fileflow/widget/dialogs/favorite_delete_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/src/isolate/parent/actions.dart';
-import 'package:localsend_app/common/src/isolate/parent/parent_isolate_provider.dart';
-import 'package:localsend_app/config/theme.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/model/persistence/favorite_device.dart';
-import 'package:localsend_app/provider/favorites_provider.dart';
-import 'package:localsend_app/provider/settings_provider.dart';
-import 'package:localsend_app/widget/dialogs/favorite_delete_dialog.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 import 'package:routerino/routerino.dart';
 

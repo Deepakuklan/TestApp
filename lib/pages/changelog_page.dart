@@ -1,9 +1,9 @@
+import 'package:fileflow/gen/assets.gen.dart';
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/util/ui/nav_bar_padding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:localsend_app/gen/assets.gen.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/util/ui/nav_bar_padding.dart';
 
 class ChangelogPage extends StatelessWidget {
   const ChangelogPage();
@@ -15,7 +15,8 @@ class ChangelogPage extends StatelessWidget {
         title: Text(t.changelogPage.title),
       ),
       body: FutureBuilder(
-        future: rootBundle.loadString(Assets.changelog), // ignore: discarded_futures
+        future: rootBundle
+            .loadString(Assets.changelog), // ignore: discarded_futures
         builder: (context, data) {
           if (!data.hasData) {
             return Container();

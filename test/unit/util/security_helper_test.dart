@@ -1,5 +1,5 @@
 import 'package:basic_utils/basic_utils.dart';
-import 'package:localsend_app/util/security_helper.dart';
+import 'package:fileflow/util/security_helper.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -98,7 +98,8 @@ x64ghD4CzRa7wYsOjeb8cUUDMSj030NO9fBGVtA=
 -----END CERTIFICATE-----''';
 
       final hash = calculateHashOfCertificate(certificate);
-      expect(hash, '247E5F7CF21DE14438EAE733E07AC5440593D0612570C7413674130608DF69A9');
+      expect(hash,
+          '247E5F7CF21DE14438EAE733E07AC5440593D0612570C7413674130608DF69A9');
     });
   });
 }

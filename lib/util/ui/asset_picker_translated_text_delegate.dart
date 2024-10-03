@@ -1,4 +1,4 @@
-import 'package:localsend_app/gen/strings.g.dart';
+import 'package:fileflow/gen/strings.g.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
 class TranslatedAssetPickerTextDelegate extends AssetPickerTextDelegate {
@@ -44,7 +44,8 @@ class TranslatedAssetPickerTextDelegate extends AssetPickerTextDelegate {
   String get viewingLimitedAssetsTip => t.assetPicker.viewingLimitedAssetsTip;
 
   @override
-  String get changeAccessibleLimitedAssets => t.assetPicker.changeAccessibleLimitedAssets;
+  String get changeAccessibleLimitedAssets =>
+      t.assetPicker.changeAccessibleLimitedAssets;
 
   @override
   String get accessAllTip => t.assetPicker.accessAllTip;

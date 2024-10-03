@@ -1,6 +1,6 @@
+import 'package:fileflow/util/ui/nav_bar_padding.dart';
+import 'package:fileflow/widget/responsive_builder.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/util/ui/nav_bar_padding.dart';
-import 'package:localsend_app/widget/responsive_builder.dart';
 
 class ResponsiveListView extends StatelessWidget {
   static const defaultMaxWidth = 600.0;
@@ -19,7 +19,8 @@ class ResponsiveListView extends StatelessWidget {
     EdgeInsets? tabletPadding,
     required Widget this.child,
     super.key,
-  })  : desktopPadding = tabletPadding ?? const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+  })  : desktopPadding = tabletPadding ??
+            const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
         children = null;
 
   const ResponsiveListView({
@@ -29,7 +30,8 @@ class ResponsiveListView extends StatelessWidget {
     EdgeInsets? tabletPadding,
     required List<Widget> this.children,
     super.key,
-  })  : desktopPadding = tabletPadding ?? const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+  })  : desktopPadding = tabletPadding ??
+            const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
         child = null;
 
   @override
@@ -42,9 +44,13 @@ class ResponsiveListView extends StatelessWidget {
             constraints: BoxConstraints(maxWidth: maxWidth),
             child: ResponsiveBuilder(
               builder: (sizingInformation) {
-                final bottom = sizingInformation.isDesktop ? desktopPadding.bottom : padding.bottom;
+                final bottom = sizingInformation.isDesktop
+                    ? desktopPadding.bottom
+                    : padding.bottom;
                 return Padding(
-                  padding: (sizingInformation.isDesktop ? desktopPadding : padding).copyWith(
+                  padding:
+                      (sizingInformation.isDesktop ? desktopPadding : padding)
+                          .copyWith(
                     bottom: bottom + getNavBarPadding(context),
                   ),
                   child: Column(

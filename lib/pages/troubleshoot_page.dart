@@ -1,14 +1,14 @@
 import 'dart:io';
 
+import 'package:fileflow/gen/strings.g.dart';
+import 'package:fileflow/provider/settings_provider.dart';
+import 'package:fileflow/util/native/cmd_helper.dart';
+import 'package:fileflow/util/native/platform_check.dart';
+import 'package:fileflow/widget/custom_icon_button.dart';
+import 'package:fileflow/widget/dialogs/not_available_on_platform_dialog.dart';
+import 'package:fileflow/widget/responsive_list_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:localsend_app/gen/strings.g.dart';
-import 'package:localsend_app/provider/settings_provider.dart';
-import 'package:localsend_app/util/native/cmd_helper.dart';
-import 'package:localsend_app/util/native/platform_check.dart';
-import 'package:localsend_app/widget/custom_icon_button.dart';
-import 'package:localsend_app/widget/dialogs/not_available_on_platform_dialog.dart';
-import 'package:localsend_app/widget/responsive_list_view.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 
 class TroubleshootPage extends StatelessWidget {

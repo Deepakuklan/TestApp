@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:collection/collection.dart';
-import 'package:localsend_app/common/model/device.dart';
-import 'package:localsend_app/common/src/isolate/parent/actions.dart';
-import 'package:localsend_app/common/src/isolate/parent/parent_isolate_provider.dart';
-import 'package:localsend_app/model/persistence/favorite_device.dart';
-import 'package:localsend_app/model/state/nearby_devices_state.dart';
-import 'package:localsend_app/provider/favorites_provider.dart';
-import 'package:localsend_app/provider/logging/discovery_logs_provider.dart';
+import 'package:fileflow/common/model/device.dart';
+import 'package:fileflow/common/src/isolate/parent/actions.dart';
+import 'package:fileflow/common/src/isolate/parent/parent_isolate_provider.dart';
+import 'package:fileflow/model/persistence/favorite_device.dart';
+import 'package:fileflow/model/state/nearby_devices_state.dart';
+import 'package:fileflow/provider/favorites_provider.dart';
+import 'package:fileflow/provider/logging/discovery_logs_provider.dart';
 import 'package:refena_flutter/refena_flutter.dart';
 
 /// This provider is responsible for:
