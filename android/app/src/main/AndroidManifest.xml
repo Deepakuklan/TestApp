@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.localsend.localsend_app">
+    package="org.localsend.fileflow">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 

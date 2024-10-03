@@ -1,4 +1,4 @@
-package org.localsend.localsend_app
+package org.localsend.fileflow
 
 import android.content.Context
 import android.content.Intent
